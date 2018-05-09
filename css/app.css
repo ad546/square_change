@@ -1,6 +1,6 @@
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -28,7 +28,15 @@ body {
 
 .item {
     border: 2px solid black;
+    position: relative;
+    box-sizing: border-box;
 }
+
+.item::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
 
 #item1 {
     background-color: white; 
